@@ -22,6 +22,7 @@ public class NetworkSessionManager : MonoBehaviour
         }
 
         Instance=this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()

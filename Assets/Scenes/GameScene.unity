@@ -297,6 +297,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16f75e1cb6b548d4a992a20c2c56a3a8, type: 3}
+--- !u!1 &86342406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86342407}
+  - component: {fileID: 86342408}
+  m_Layer: 0
+  m_Name: NetworkSessionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &86342407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86342406}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &86342408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86342406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754e2c1463f034078864043feeacf7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetworkSessionManager
+  numberOfPlayersNeededToStartRound: 0
 --- !u!1 &94501452
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,9 +442,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d9db9626104da59357651088226725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Multiplayer.Tools.NetworkSimulator.Runtime::Unity.Multiplayer.Tools.NetworkSimulator.Runtime.NetworkSimulator
-  m_PresetAsset: {fileID: 0}
+  m_PresetAsset: {fileID: 11400000, guid: 630ae4031d9cb4c199d0180a81d15d4b, type: 2}
   m_PresetReference:
-    rid: 3269688129163624524
+    rid: -2
   m_Scenario:
     rid: -2
   m_IsScenarioSettingsFolded: 0
@@ -409,15 +454,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 3269688129163624524
-      type: {class: NetworkSimulatorPreset, ns: Unity.Multiplayer.Tools.NetworkSimulator.Runtime, asm: Unity.Multiplayer.Tools.NetworkSimulator.Runtime}
-      data:
-        <Name>k__BackingField: 
-        <Description>k__BackingField: 
-        <PacketDelayMs>k__BackingField: 0
-        <PacketJitterMs>k__BackingField: 0
-        <PacketLossInterval>k__BackingField: 0
-        <PacketLossPercent>k__BackingField: 0
 --- !u!4 &188694868
 Transform:
   m_ObjectHideFlags: 0
@@ -2016,7 +2052,6 @@ MonoBehaviour:
   playerPrefab: {fileID: 9050738593715133282, guid: 957e6fe3d904446ec8a7c26cb4a61520, type: 3}
   regularRoundDuration: 60
   gateTransform: {fileID: 812565711}
-  colliderStart: {fileID: 1949621739}
   gameAuthoritativeState:
     m_InternalValue: 0
   roundTimer:
@@ -4806,6 +4841,7 @@ SceneRoots:
   - {fileID: 1308853203}
   - {fileID: 1267086156}
   - {fileID: 480149598}
+  - {fileID: 86342407}
   - {fileID: 668308451}
   - {fileID: 1315783153}
   - {fileID: 188694868}

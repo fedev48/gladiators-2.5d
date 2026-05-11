@@ -10,15 +10,25 @@ public class PlayerController : Unit
     private delegate void PerformRightClickActionDelegate(Vector3 target);
 
     private PerformRightClickActionDelegate performRightClickActionDelegate;
-    private Rigidbody rb;
 
     [Header("spells")]
     public List<IPlayerSpell> playerSpells = new List<IPlayerSpell>();
     public static IPlayerSpell currentSpell;
     public SpellType spellType;
 
+    
+
+    [Header("Isometric compensation")]
+    [SerializeField] private float depthMultiplier = 1.5f;
+    private NetworkVariable<Vector3> camForward = new(
+        Vector3.forward,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Owner
+    );
+
     [Header("anticipation")]
-    private List<TimedInput> timedInputs = new List<TimedInput>();
+    private List<TimedInput> timedAgentSteps = new List<TimedInput>();
+    private List<Vector3> pendingDestinations = new List<Vector3>();
     [SerializeField] private AnticipatedNetworkTransform anticipatedNetworkTransform;
 
     [Header("network destination sync")]
@@ -29,7 +39,7 @@ public class PlayerController : Unit
     );
 
     [SerializeField] private float destinationSyncTolerance = 0.01f;
-    private Vector3 lastPredictedDestination;
+    
 
     public override void OnNetworkSpawn()
     {
@@ -37,6 +47,10 @@ public class PlayerController : Unit
 
         agent.updatePosition = false;
         agent.updateRotation = false;
+       
+
+        if (!IsServer && Camera.main != null)
+            camForward.Value = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up).normalized;
 
         if (IsOwner && !IsServer)
         {
@@ -47,7 +61,7 @@ public class PlayerController : Unit
             anticipatedNetworkTransform.StaleDataHandling = StaleDataHandling.Ignore;
         }
 
-        if (IsServer) anticipatedNetworkTransform.PositionThreshold = 0;//this is to force the nt to update the position every tick, even if there's no delta in the positions
+        if (IsServer) anticipatedNetworkTransform.PositionThreshold = 0;
         
         syncedDestination.OnValueChanged += OnSyncedDestinationChanged;
 
@@ -60,12 +74,16 @@ public class PlayerController : Unit
         performRightClickActionDelegate += CalculateLocalPath;
 
         agent.SetDestination(transform.position);
-        lastPredictedDestination = transform.position;
+        pendingDestinations.Add(transform.position);
     }
 
     public override void OnNetworkDespawn()
     {
         syncedDestination.OnValueChanged -= OnSyncedDestinationChanged;
+
+        InputController.Instance.OnMouseRightClickDown -= MouseController_OnMouseRightClickDown;
+        InputController.Instance.OnMouseRightClickUp -= MouseController_OnMouseRightClickUp;
+        InputController.Instance.OnNumKeyDown -= OnNumKeyDown;
         base.OnNetworkDespawn();
     }
 
@@ -74,7 +92,7 @@ public class PlayerController : Unit
 
         if (IsServer)
         { 
-            if (ArePointsClose(syncedDestination.Value, agent.destination, 0.01f)) syncedDestination.Value = agent.destination;
+            // if (ArePointsClose(syncedDestination.Value, agent.destination, destinationSyncTolerance)) syncedDestination.Value = agent.destination;
 
             return;
         }
@@ -87,6 +105,7 @@ public class PlayerController : Unit
 
     private void Move(bool isServer, bool isRollback, Vector3 nextPosition = default)
     {
+
         if (nextPosition == default)
         {
             nextPosition = agent.nextPosition;
@@ -96,22 +115,40 @@ public class PlayerController : Unit
 
         if (!isServer && !isRollback)
         {
-            timedInputs.Add(new TimedInput
-            {
-                time = NetworkManager.Singleton.LocalTime.Time,
-                stampedTarget = nextPosition
-            });
+            AddInputToHistory(nextPosition);
         }
+       
 
-        if (toNextPosition.sqrMagnitude < 0.0001f) return;
+        if (toNextPosition.sqrMagnitude < 0.001f) return;
 
-        float step = agent.speed * Time.fixedDeltaTime;
-        Vector3 move = Vector3.ClampMagnitude(toNextPosition, step);
+        Vector3 flatDir = new Vector3(toNextPosition.x, 0f, toNextPosition.z);
+        float flatDist = flatDir.magnitude;
 
-        Vector3 targetPosition = transform.position + move;
+        if (flatDist > 0.0001f)
+        {
+            float alignment = Mathf.Abs(Vector3.Dot(flatDir / flatDist, camForward.Value));
+            float scale = Mathf.Lerp(1f, depthMultiplier, alignment);
+            toNextPosition.x *= scale;
+            toNextPosition.z *= scale;
+        }
+        
+
+        Vector3 targetPosition = transform.position + toNextPosition;
+
+        if (!isRollback)agent.nextPosition = targetPosition;
+
         if (anticipatedNetworkTransform == null) return;
 
         anticipatedNetworkTransform.AnticipateMove(targetPosition);
+    }
+
+    private void AddInputToHistory(Vector3 nextPosition)
+    {
+        timedAgentSteps.Add(new TimedInput
+        {
+            time = NetworkManager.Singleton.LocalTime.Time,
+            stampedTarget = nextPosition
+        });
     }
 
     [Rpc(SendTo.Server)]
@@ -163,12 +200,9 @@ public class PlayerController : Unit
         if (!agent.isOnNavMesh) return;
 
         agent.SetDestination(targetPosition);
-        lastPredictedDestination = targetPosition;
-
+        pendingDestinations.Add(targetPosition);
 
         CalculateServerPathRpc(targetPosition);
-
-        Debug.Log("Calculate");
     }
 
     [Rpc(SendTo.Server)]
@@ -186,13 +220,20 @@ public class PlayerController : Unit
         if (!agent.isOnNavMesh) return;
 
        
-        if (IsOwner && ArePointsClose(lastPredictedDestination, newValue, destinationSyncTolerance))
+        if (IsOwner)
         {
-            return;
+            int matchIndex = pendingDestinations.FindIndex(d => ArePointsClose(d, newValue, destinationSyncTolerance));
+            if (matchIndex >= 0)
+            {
+                pendingDestinations.RemoveAt(matchIndex);
+                return;
+            }
         }
 
         agent.SetDestination(newValue);
     }
+
+    private void OnMoveSpeedChanged(float _, float next) => agent.speed = next;
 
     private bool ArePointsClose(Vector3 a, Vector3 b, float tolerance)
     {
@@ -211,7 +252,7 @@ public class PlayerController : Unit
         var previousState = anticipatedNetworkTransform.PreviousAnticipatedState;
         double authorityTime = NetworkManager.LocalTime.Time - lastRoundTripTime;
 
-        foreach (TimedInput item in timedInputs)
+        foreach (TimedInput item in timedAgentSteps)
         {
             if (item.time <= authorityTime) continue;
             Move(false, true, item.stampedTarget);
@@ -233,12 +274,12 @@ public class PlayerController : Unit
 
     public void RemoveBefore(double time)
     {
-        timedInputs.RemoveAll(x => x.time < time);
+        timedAgentSteps.RemoveAll(x => x.time < time);
     }
 
     public void Clear()
     {
-        timedInputs.Clear();
+        timedAgentSteps.Clear();
     }
 
     public override void PerformRightClickAction(Vector3 targetPosition)

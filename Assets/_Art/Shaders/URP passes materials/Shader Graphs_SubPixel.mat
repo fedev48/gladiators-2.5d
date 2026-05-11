@@ -38,6 +38,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _SubPixelOffset: {r: -0.00074469787, g: -0.001055314, b: 0, a: 0}
+    - _SubPixelOffset: {r: 0.0014705963, g: -0.0004533621, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

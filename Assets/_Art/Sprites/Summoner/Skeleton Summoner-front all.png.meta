@@ -1,0 +1,1499 @@
+fileFormatVersion: 2
+guid: b8e095f6968404f14b881a9aabc74259
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164b18a3f82eb46bcae218525d0e4487
+      internalID: 252576523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0085f37aac8495fa15293c20aa7128
+      internalID: 659130142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc23e25a59ec4ef9988418644ff2241
+      internalID: 1704704641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_3
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 435450a84cffb45d79235491c6a32704
+      internalID: 2077690599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_4
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294beb71523d94020937a7de4707331f
+      internalID: 875758851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_5
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787f4ce75156d42ea8c54302fee17bba
+      internalID: 1384666019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_6
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5ac04ee6d864435ab7931d3c345a93
+      internalID: 1761380544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_7
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91d17883ebd045d0abb27e6ee3407b3
+      internalID: -4932316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_8
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555056c8665db4c3f9399fa25e4004c0
+      internalID: 1822455201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_9
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd8233546d744981af5fc2ceda7ad2f
+      internalID: 1418262948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_10
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9631b19b0c4421a8f9fe20338bdb5f
+      internalID: 1004924995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_11
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918b0e04cbbd347afa99d095d50735a3
+      internalID: 501588191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_12
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7394cfb8701664425ab150d2d095b9a6
+      internalID: 1769568168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_13
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2664e86e6e5d46529986a2c00516da3
+      internalID: -1375757374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_14
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797e15f37e5bc4ccf854369a2a730212
+      internalID: -1048065131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_15
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de418b3d5d19a4625b7b4a4c4dc8a689
+      internalID: 1023137041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_16
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a46ff84a0a8f4ae18ce74916b10b773
+      internalID: 1068314891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_17
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8966f6a5782c343c8a46b585fe7e8541
+      internalID: -1730815440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_18
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837b2ac85faef466fb800261df5b8c4f
+      internalID: 486840067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_19
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f4b3368011240769a2f48cf9642353
+      internalID: 1605475911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_20
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2849e9a58b66a429d9eaf587d6313e45
+      internalID: 33142294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_21
+      rect:
+        serializedVersion: 2
+        x: 2772
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b43a8c0c86b44cd1a6055b04c7c77ce
+      internalID: 1446051051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_22
+      rect:
+        serializedVersion: 2
+        x: 2904
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e2666db83b44214a8719e8c772600a
+      internalID: -1454737557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_23
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f63c4117f74b4bc686afa159a896dd6
+      internalID: -1417739811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_24
+      rect:
+        serializedVersion: 2
+        x: 3168
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb19c8327e9742af89a4b78b5afd262
+      internalID: 1353357603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_25
+      rect:
+        serializedVersion: 2
+        x: 3300
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb48f329f8fa449328adc32e5dd881b2
+      internalID: 1934604387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_26
+      rect:
+        serializedVersion: 2
+        x: 3432
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3007588794e4115984c24f315471d0
+      internalID: -565252394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_27
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fc846c7b10841be89b53a3fc1b6a5d
+      internalID: -1530652642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_28
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f69419776194994926d6e89c53508a
+      internalID: -936722387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_29
+      rect:
+        serializedVersion: 2
+        x: 3828
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c548a4b41644cacbbf2738733199f9
+      internalID: 361489864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_30
+      rect:
+        serializedVersion: 2
+        x: 3960
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d477aa74f01424de0a384476f826b106
+      internalID: 885278905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_31
+      rect:
+        serializedVersion: 2
+        x: 4092
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb68822bb2b9748fea565b54296c91e0
+      internalID: -858578960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_32
+      rect:
+        serializedVersion: 2
+        x: 4224
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2a0a342878346a080651940aab780e
+      internalID: 2097416877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_33
+      rect:
+        serializedVersion: 2
+        x: 4356
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748feac837b6f4652bbbd6c205aeeb1d
+      internalID: 1384712930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_34
+      rect:
+        serializedVersion: 2
+        x: 4488
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67ce99bfcbdb4f7cb311c426acb9c9c
+      internalID: 176664151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_35
+      rect:
+        serializedVersion: 2
+        x: 4620
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7706c47d5ff4642a187b4c6223c89fa0
+      internalID: 2061379337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_36
+      rect:
+        serializedVersion: 2
+        x: 4752
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee260307bab584523883e3bb4e4b47a5
+      internalID: 1368359734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_37
+      rect:
+        serializedVersion: 2
+        x: 4884
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7417df950e3426da0c5e8ffb124d74
+      internalID: -2044333725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_38
+      rect:
+        serializedVersion: 2
+        x: 5016
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb34951342324f31bef5dd2036acc73
+      internalID: -586741897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_39
+      rect:
+        serializedVersion: 2
+        x: 5148
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e35c773b15ed4d609b33c508b906478
+      internalID: -1711664573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_40
+      rect:
+        serializedVersion: 2
+        x: 5280
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43feb6f5845e4985a9915beb0fb75f7
+      internalID: 1948556388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_41
+      rect:
+        serializedVersion: 2
+        x: 5412
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8e7651d4d2747bebab7ef2c3e87504
+      internalID: -120741733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_42
+      rect:
+        serializedVersion: 2
+        x: 5544
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cc83893c55b4224ab6bbc59b4d70bf
+      internalID: 1637132245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_43
+      rect:
+        serializedVersion: 2
+        x: 5676
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124125732c99f4ea1aaa657ebf55facd
+      internalID: -339597087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_44
+      rect:
+        serializedVersion: 2
+        x: 5808
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f296753883944c5b9d9f09273a21c23
+      internalID: -1672992944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_45
+      rect:
+        serializedVersion: 2
+        x: 5940
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a2a32883d224a029d345518e5c1554
+      internalID: -587632861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_46
+      rect:
+        serializedVersion: 2
+        x: 6072
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ec4a28fc8044e65b7262af4e9c954a
+      internalID: 236835760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_47
+      rect:
+        serializedVersion: 2
+        x: 6204
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0098932e8444b98a859bbb88cbac07
+      internalID: 1545534268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_48
+      rect:
+        serializedVersion: 2
+        x: 6336
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1b24169f0ce4620a34ebc36d48af23
+      internalID: -1541517626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_49
+      rect:
+        serializedVersion: 2
+        x: 6468
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bab43fef7f9487b99c662f175f603e
+      internalID: 1827157607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_50
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 183e5cb0798c54a6b82255aec771537f
+      internalID: -589566343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_51
+      rect:
+        serializedVersion: 2
+        x: 6732
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2158b9cdb547c4986b704865938ca5ab
+      internalID: -1603470346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_52
+      rect:
+        serializedVersion: 2
+        x: 6864
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33043a78fa714dfda2eca46ed804755
+      internalID: -1281355746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_53
+      rect:
+        serializedVersion: 2
+        x: 6996
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7204cd247fb4a6092fb61caf70a38c
+      internalID: -276496363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_54
+      rect:
+        serializedVersion: 2
+        x: 7128
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd6ede2b91c944a4a20b93645a3bc40
+      internalID: 2061950593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_55
+      rect:
+        serializedVersion: 2
+        x: 7260
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b056b4e7a094d0796c0ae49ec5f0c5
+      internalID: 1974123853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_56
+      rect:
+        serializedVersion: 2
+        x: 7392
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bc8e314f5fd4e69848cfd2bd5e1e71
+      internalID: -1095696770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_57
+      rect:
+        serializedVersion: 2
+        x: 7524
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba290f6fbe3b840838a93695d4e4253e
+      internalID: 780822470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_58
+      rect:
+        serializedVersion: 2
+        x: 7656
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c153d627c044d1db49d406bb1086f6
+      internalID: 1633182110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-front all_59
+      rect:
+        serializedVersion: 2
+        x: 7788
+        y: 0
+        width: 132
+        height: 103
+      alignment: 9
+      pivot: {x: 0.35, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19fc6616e34a4ad1ac9fe62a38088c8
+      internalID: -1488493701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dcafad916f66148d3bbce83e1bcd8873
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":132.0,"y":103.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.4000000059604645},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Skeleton Summoner-front all_0: 252576523
+      Skeleton Summoner-front all_1: 659130142
+      Skeleton Summoner-front all_10: 1004924995
+      Skeleton Summoner-front all_11: 501588191
+      Skeleton Summoner-front all_12: 1769568168
+      Skeleton Summoner-front all_13: -1375757374
+      Skeleton Summoner-front all_14: -1048065131
+      Skeleton Summoner-front all_15: 1023137041
+      Skeleton Summoner-front all_16: 1068314891
+      Skeleton Summoner-front all_17: -1730815440
+      Skeleton Summoner-front all_18: 486840067
+      Skeleton Summoner-front all_19: 1605475911
+      Skeleton Summoner-front all_2: 1704704641
+      Skeleton Summoner-front all_20: 33142294
+      Skeleton Summoner-front all_21: 1446051051
+      Skeleton Summoner-front all_22: -1454737557
+      Skeleton Summoner-front all_23: -1417739811
+      Skeleton Summoner-front all_24: 1353357603
+      Skeleton Summoner-front all_25: 1934604387
+      Skeleton Summoner-front all_26: -565252394
+      Skeleton Summoner-front all_27: -1530652642
+      Skeleton Summoner-front all_28: -936722387
+      Skeleton Summoner-front all_29: 361489864
+      Skeleton Summoner-front all_3: 2077690599
+      Skeleton Summoner-front all_30: 885278905
+      Skeleton Summoner-front all_31: -858578960
+      Skeleton Summoner-front all_32: 2097416877
+      Skeleton Summoner-front all_33: 1384712930
+      Skeleton Summoner-front all_34: 176664151
+      Skeleton Summoner-front all_35: 2061379337
+      Skeleton Summoner-front all_36: 1368359734
+      Skeleton Summoner-front all_37: -2044333725
+      Skeleton Summoner-front all_38: -586741897
+      Skeleton Summoner-front all_39: -1711664573
+      Skeleton Summoner-front all_4: 875758851
+      Skeleton Summoner-front all_40: 1948556388
+      Skeleton Summoner-front all_41: -120741733
+      Skeleton Summoner-front all_42: 1637132245
+      Skeleton Summoner-front all_43: -339597087
+      Skeleton Summoner-front all_44: -1672992944
+      Skeleton Summoner-front all_45: -587632861
+      Skeleton Summoner-front all_46: 236835760
+      Skeleton Summoner-front all_47: 1545534268
+      Skeleton Summoner-front all_48: -1541517626
+      Skeleton Summoner-front all_49: 1827157607
+      Skeleton Summoner-front all_5: 1384666019
+      Skeleton Summoner-front all_50: -589566343
+      Skeleton Summoner-front all_51: -1603470346
+      Skeleton Summoner-front all_52: -1281355746
+      Skeleton Summoner-front all_53: -276496363
+      Skeleton Summoner-front all_54: 2061950593
+      Skeleton Summoner-front all_55: 1974123853
+      Skeleton Summoner-front all_56: -1095696770
+      Skeleton Summoner-front all_57: 780822470
+      Skeleton Summoner-front all_58: 1633182110
+      Skeleton Summoner-front all_59: -1488493701
+      Skeleton Summoner-front all_6: 1761380544
+      Skeleton Summoner-front all_7: -4932316
+      Skeleton Summoner-front all_8: 1822455201
+      Skeleton Summoner-front all_9: 1418262948
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

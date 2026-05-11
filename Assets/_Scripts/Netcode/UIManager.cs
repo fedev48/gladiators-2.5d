@@ -23,8 +23,6 @@ public class UIManager : MonoBehaviour
 
         startClientButton.onClick.AddListener(()=>
         {
-           
-
             NetworkManager.StartClient();
         });
     }
