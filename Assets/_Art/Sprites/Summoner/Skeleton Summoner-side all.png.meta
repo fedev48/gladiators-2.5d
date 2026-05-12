@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8e095f6968404f14b881a9aabc74259
+guid: 82ef41c48d36548508aee9177984ca4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 16384
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
     compressionQuality: 50
@@ -97,1321 +97,1607 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_0
+      name: Skeleton Summoner-side all_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 164b18a3f82eb46bcae218525d0e4487
-      internalID: 252576523
+      spriteID: ff7da01f0ea014106be04abb41b0df05
+      internalID: 994515673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_1
+      name: Skeleton Summoner-side all_1
       rect:
         serializedVersion: 2
         x: 132
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e0085f37aac8495fa15293c20aa7128
-      internalID: 659130142
+      spriteID: 08f6059a72cdb403cbab977618a26262
+      internalID: -1435907686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_2
+      name: Skeleton Summoner-side all_2
       rect:
         serializedVersion: 2
         x: 264
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cc23e25a59ec4ef9988418644ff2241
-      internalID: 1704704641
+      spriteID: 4505a9164c38d4978afbc4c832eedccc
+      internalID: -18496469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_3
+      name: Skeleton Summoner-side all_3
       rect:
         serializedVersion: 2
         x: 396
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 435450a84cffb45d79235491c6a32704
-      internalID: 2077690599
+      spriteID: e598848b3f1e54be3a29fcffff73dd66
+      internalID: 858833557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_4
+      name: Skeleton Summoner-side all_4
       rect:
         serializedVersion: 2
         x: 528
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 294beb71523d94020937a7de4707331f
-      internalID: 875758851
+      spriteID: 35727cc41016b47f1bb0cea85f9d60e7
+      internalID: 800375094
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_5
+      name: Skeleton Summoner-side all_5
       rect:
         serializedVersion: 2
         x: 660
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 787f4ce75156d42ea8c54302fee17bba
-      internalID: 1384666019
+      spriteID: e06524fb586754b6bb9cd4f95015baa8
+      internalID: 1826086585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_6
+      name: Skeleton Summoner-side all_6
       rect:
         serializedVersion: 2
         x: 792
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce5ac04ee6d864435ab7931d3c345a93
-      internalID: 1761380544
+      spriteID: 4beb0071b1ea14849aa1f6b097157f85
+      internalID: -956935381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_7
+      name: Skeleton Summoner-side all_7
       rect:
         serializedVersion: 2
         x: 924
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d91d17883ebd045d0abb27e6ee3407b3
-      internalID: -4932316
+      spriteID: 016605c83d7ea4fd1b670d862800a8f3
+      internalID: 501726620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_8
+      name: Skeleton Summoner-side all_8
       rect:
         serializedVersion: 2
         x: 1056
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 555056c8665db4c3f9399fa25e4004c0
-      internalID: 1822455201
+      spriteID: 83cf43fbffec64b628126e7fff8d3b1e
+      internalID: -843669542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_9
+      name: Skeleton Summoner-side all_9
       rect:
         serializedVersion: 2
         x: 1188
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dd8233546d744981af5fc2ceda7ad2f
-      internalID: 1418262948
+      spriteID: e32381a0ed39a4579b25536e24fcb0de
+      internalID: 1218605423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_10
+      name: Skeleton Summoner-side all_10
       rect:
         serializedVersion: 2
         x: 1320
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c9631b19b0c4421a8f9fe20338bdb5f
-      internalID: 1004924995
+      spriteID: fbea5c16508ff4ccc9a5c862dadd2015
+      internalID: 730115607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_11
+      name: Skeleton Summoner-side all_11
       rect:
         serializedVersion: 2
         x: 1452
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 918b0e04cbbd347afa99d095d50735a3
-      internalID: 501588191
+      spriteID: 4c77dd2350e3647d8b3d0aba363729c0
+      internalID: -1749038430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_12
+      name: Skeleton Summoner-side all_12
       rect:
         serializedVersion: 2
         x: 1584
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7394cfb8701664425ab150d2d095b9a6
-      internalID: 1769568168
+      spriteID: de88e53719ee349928c5b6f42bf6289c
+      internalID: -32828992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_13
+      name: Skeleton Summoner-side all_13
       rect:
         serializedVersion: 2
         x: 1716
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2664e86e6e5d46529986a2c00516da3
-      internalID: -1375757374
+      spriteID: 8da688a9f167a4379b35b36e34474068
+      internalID: -307941159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_14
+      name: Skeleton Summoner-side all_14
       rect:
         serializedVersion: 2
         x: 1848
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 797e15f37e5bc4ccf854369a2a730212
-      internalID: -1048065131
+      spriteID: d51924a14ee37498391948fe06d493b5
+      internalID: 495804482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_15
+      name: Skeleton Summoner-side all_15
       rect:
         serializedVersion: 2
         x: 1980
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de418b3d5d19a4625b7b4a4c4dc8a689
-      internalID: 1023137041
+      spriteID: 52d88a511e97c404fa1405703e020168
+      internalID: -682198016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_16
+      name: Skeleton Summoner-side all_16
       rect:
         serializedVersion: 2
         x: 2112
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a46ff84a0a8f4ae18ce74916b10b773
-      internalID: 1068314891
+      spriteID: 6ea8431a714d149f0bf7a0f2d27c0287
+      internalID: -1584354820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_17
+      name: Skeleton Summoner-side all_17
       rect:
         serializedVersion: 2
         x: 2244
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8966f6a5782c343c8a46b585fe7e8541
-      internalID: -1730815440
+      spriteID: 1670983f0b1c94e3db3bd205e2e943e9
+      internalID: -1352046310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_18
+      name: Skeleton Summoner-side all_18
       rect:
         serializedVersion: 2
         x: 2376
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 837b2ac85faef466fb800261df5b8c4f
-      internalID: 486840067
+      spriteID: 9880056e14c6e4ca0a6850efa78d36c8
+      internalID: 1581345870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_19
+      name: Skeleton Summoner-side all_19
       rect:
         serializedVersion: 2
         x: 2508
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f4b3368011240769a2f48cf9642353
-      internalID: 1605475911
+      spriteID: cacfc477a20584a9e8335019f8688d6a
+      internalID: -2032607393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_20
+      name: Skeleton Summoner-side all_20
       rect:
         serializedVersion: 2
         x: 2640
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2849e9a58b66a429d9eaf587d6313e45
-      internalID: 33142294
+      spriteID: 44b6b3a06c35447ee93c262e75895c9a
+      internalID: 1519443411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_21
+      name: Skeleton Summoner-side all_21
       rect:
         serializedVersion: 2
         x: 2772
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b43a8c0c86b44cd1a6055b04c7c77ce
-      internalID: 1446051051
+      spriteID: c147bf9e181254acbb60547471d60eea
+      internalID: -696919651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_22
+      name: Skeleton Summoner-side all_22
       rect:
         serializedVersion: 2
         x: 2904
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81e2666db83b44214a8719e8c772600a
-      internalID: -1454737557
+      spriteID: 00f9375d9184b4852af312928fcb8253
+      internalID: 1848438083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_23
+      name: Skeleton Summoner-side all_23
       rect:
         serializedVersion: 2
         x: 3036
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f63c4117f74b4bc686afa159a896dd6
-      internalID: -1417739811
+      spriteID: d55d8c7bbb6a444d1a383f63264ef7db
+      internalID: 856486429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_24
+      name: Skeleton Summoner-side all_24
       rect:
         serializedVersion: 2
         x: 3168
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cb19c8327e9742af89a4b78b5afd262
-      internalID: 1353357603
+      spriteID: b442eec0744494b128c12b67e765d785
+      internalID: 35051676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_25
+      name: Skeleton Summoner-side all_25
       rect:
         serializedVersion: 2
         x: 3300
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb48f329f8fa449328adc32e5dd881b2
-      internalID: 1934604387
+      spriteID: e008c1c816d9343a6a128dba378b5419
+      internalID: 85293466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_26
+      name: Skeleton Summoner-side all_26
       rect:
         serializedVersion: 2
         x: 3432
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d3007588794e4115984c24f315471d0
-      internalID: -565252394
+      spriteID: 0cc8d77d4d32641cbbc96d1fb72b5149
+      internalID: -1805650104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_27
+      name: Skeleton Summoner-side all_27
       rect:
         serializedVersion: 2
         x: 3564
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07fc846c7b10841be89b53a3fc1b6a5d
-      internalID: -1530652642
+      spriteID: 3c2abdd52d8c04bceaa559ed81469668
+      internalID: -1498919413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_28
+      name: Skeleton Summoner-side all_28
       rect:
         serializedVersion: 2
         x: 3696
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f69419776194994926d6e89c53508a
-      internalID: -936722387
+      spriteID: 05c7e93e30d7342b0bd59636df92ea6c
+      internalID: 2147156582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_29
+      name: Skeleton Summoner-side all_29
       rect:
         serializedVersion: 2
         x: 3828
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84c548a4b41644cacbbf2738733199f9
-      internalID: 361489864
+      spriteID: d072d7820daaf41bc9655d930c73b51b
+      internalID: -813303771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_30
+      name: Skeleton Summoner-side all_30
       rect:
         serializedVersion: 2
         x: 3960
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d477aa74f01424de0a384476f826b106
-      internalID: 885278905
+      spriteID: 40de131c8ef42485ea19950d9f2e8c27
+      internalID: -351428765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_31
+      name: Skeleton Summoner-side all_31
       rect:
         serializedVersion: 2
         x: 4092
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb68822bb2b9748fea565b54296c91e0
-      internalID: -858578960
+      spriteID: cf1316b90e33d43e995ad41302c337b4
+      internalID: -1441931071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_32
+      name: Skeleton Summoner-side all_32
       rect:
         serializedVersion: 2
         x: 4224
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2a0a342878346a080651940aab780e
-      internalID: 2097416877
+      spriteID: 455498002d1814011ac460fb8832a557
+      internalID: 857633851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_33
+      name: Skeleton Summoner-side all_33
       rect:
         serializedVersion: 2
         x: 4356
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 748feac837b6f4652bbbd6c205aeeb1d
-      internalID: 1384712930
+      spriteID: d729eb4a3f5e947a3b709b0250178a8b
+      internalID: -751328808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_34
+      name: Skeleton Summoner-side all_34
       rect:
         serializedVersion: 2
         x: 4488
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67ce99bfcbdb4f7cb311c426acb9c9c
-      internalID: 176664151
+      spriteID: 37e8d9132b968454a9ac24f5ad6c7ab8
+      internalID: -167357147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_35
+      name: Skeleton Summoner-side all_35
       rect:
         serializedVersion: 2
         x: 4620
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7706c47d5ff4642a187b4c6223c89fa0
-      internalID: 2061379337
+      spriteID: 0015e78ac5d544ddfb74123d579feacf
+      internalID: -1074992382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_36
+      name: Skeleton Summoner-side all_36
       rect:
         serializedVersion: 2
         x: 4752
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee260307bab584523883e3bb4e4b47a5
-      internalID: 1368359734
+      spriteID: be1b771f1dc7d4499891746383ca0889
+      internalID: 1950298843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_37
+      name: Skeleton Summoner-side all_37
       rect:
         serializedVersion: 2
         x: 4884
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce7417df950e3426da0c5e8ffb124d74
-      internalID: -2044333725
+      spriteID: b18a339d22b2541c0bb5034fea8225c2
+      internalID: -444408069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_38
+      name: Skeleton Summoner-side all_38
       rect:
         serializedVersion: 2
         x: 5016
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb34951342324f31bef5dd2036acc73
-      internalID: -586741897
+      spriteID: d8490918b9d0545518e9db596694319b
+      internalID: -1986221463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_39
+      name: Skeleton Summoner-side all_39
       rect:
         serializedVersion: 2
         x: 5148
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e35c773b15ed4d609b33c508b906478
-      internalID: -1711664573
+      spriteID: 2a3e84de3da634d9fb522000e712198c
+      internalID: 1032179612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_40
+      name: Skeleton Summoner-side all_40
       rect:
         serializedVersion: 2
         x: 5280
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f43feb6f5845e4985a9915beb0fb75f7
-      internalID: 1948556388
+      spriteID: 400820ebf207642bda13046d57943886
+      internalID: 1033570239
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_41
+      name: Skeleton Summoner-side all_41
       rect:
         serializedVersion: 2
         x: 5412
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca8e7651d4d2747bebab7ef2c3e87504
-      internalID: -120741733
+      spriteID: 039b2b50518194a86ac89db62eba1616
+      internalID: -239054279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_42
+      name: Skeleton Summoner-side all_42
       rect:
         serializedVersion: 2
         x: 5544
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78cc83893c55b4224ab6bbc59b4d70bf
-      internalID: 1637132245
+      spriteID: a8dba182c1d304c029ae8e0f0382aa88
+      internalID: 1171226932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_43
+      name: Skeleton Summoner-side all_43
       rect:
         serializedVersion: 2
         x: 5676
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 124125732c99f4ea1aaa657ebf55facd
-      internalID: -339597087
+      spriteID: 3d4e52590b072459bbc77754ba1e6f8d
+      internalID: -1890105653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_44
+      name: Skeleton Summoner-side all_44
       rect:
         serializedVersion: 2
         x: 5808
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f296753883944c5b9d9f09273a21c23
-      internalID: -1672992944
+      spriteID: b04f3f8dabca842f48c877cc209e4750
+      internalID: -1343011277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_45
+      name: Skeleton Summoner-side all_45
       rect:
         serializedVersion: 2
         x: 5940
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50a2a32883d224a029d345518e5c1554
-      internalID: -587632861
+      spriteID: 1e621d832ea5e462ab96694d0780b576
+      internalID: -1225412523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_46
+      name: Skeleton Summoner-side all_46
       rect:
         serializedVersion: 2
         x: 6072
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24ec4a28fc8044e65b7262af4e9c954a
-      internalID: 236835760
+      spriteID: c1b15a63601f549c39d3c0480200f597
+      internalID: -1078215779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_47
+      name: Skeleton Summoner-side all_47
       rect:
         serializedVersion: 2
         x: 6204
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b0098932e8444b98a859bbb88cbac07
-      internalID: 1545534268
+      spriteID: 9a16ae22761b8484ea9f9ee6bb5b5d92
+      internalID: 785139631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_48
+      name: Skeleton Summoner-side all_48
       rect:
         serializedVersion: 2
         x: 6336
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da1b24169f0ce4620a34ebc36d48af23
-      internalID: -1541517626
+      spriteID: 0696ba5ec052d4f5d9ead33e69d86fdd
+      internalID: 944200955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_49
+      name: Skeleton Summoner-side all_49
       rect:
         serializedVersion: 2
         x: 6468
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31bab43fef7f9487b99c662f175f603e
-      internalID: 1827157607
+      spriteID: 05b79595ddfb246c2b9ba8569d5785d0
+      internalID: -141213498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_50
+      name: Skeleton Summoner-side all_50
       rect:
         serializedVersion: 2
         x: 6600
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183e5cb0798c54a6b82255aec771537f
-      internalID: -589566343
+      spriteID: 9175f0d498cdb4840b6d30e0b78d08d0
+      internalID: -285518073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_51
+      name: Skeleton Summoner-side all_51
       rect:
         serializedVersion: 2
         x: 6732
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2158b9cdb547c4986b704865938ca5ab
-      internalID: -1603470346
+      spriteID: 1fae013e97fe5409c826c07ac01f2023
+      internalID: 2053384724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_52
+      name: Skeleton Summoner-side all_52
       rect:
         serializedVersion: 2
         x: 6864
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33043a78fa714dfda2eca46ed804755
-      internalID: -1281355746
+      spriteID: 65d1ff9681950408bb85a5b23e74866a
+      internalID: 576635602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_53
+      name: Skeleton Summoner-side all_53
       rect:
         serializedVersion: 2
         x: 6996
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7204cd247fb4a6092fb61caf70a38c
-      internalID: -276496363
+      spriteID: 2b9b9b41c07634b78afd0f622a88dbce
+      internalID: 471759884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_54
+      name: Skeleton Summoner-side all_54
       rect:
         serializedVersion: 2
         x: 7128
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cd6ede2b91c944a4a20b93645a3bc40
-      internalID: 2061950593
+      spriteID: 10fac421097434297844305ae0eb01fe
+      internalID: 2071965800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_55
+      name: Skeleton Summoner-side all_55
       rect:
         serializedVersion: 2
         x: 7260
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b056b4e7a094d0796c0ae49ec5f0c5
-      internalID: 1974123853
+      spriteID: 7174ba8f6f8234a9c959b762bd77c5f3
+      internalID: -443610822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_56
+      name: Skeleton Summoner-side all_56
       rect:
         serializedVersion: 2
         x: 7392
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45bc8e314f5fd4e69848cfd2bd5e1e71
-      internalID: -1095696770
+      spriteID: 72a77c7235da8460d84b5d3926fc4046
+      internalID: 1389290531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_57
+      name: Skeleton Summoner-side all_57
       rect:
         serializedVersion: 2
         x: 7524
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba290f6fbe3b840838a93695d4e4253e
-      internalID: 780822470
+      spriteID: b439c1edbec99470cb95f86e7baa5943
+      internalID: 405462399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_58
+      name: Skeleton Summoner-side all_58
       rect:
         serializedVersion: 2
         x: 7656
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c153d627c044d1db49d406bb1086f6
-      internalID: 1633182110
+      spriteID: d52fff4fdd5384982be857015959ed6f
+      internalID: 665561467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton Summoner-front all_59
+      name: Skeleton Summoner-side all_59
       rect:
         serializedVersion: 2
         x: 7788
         y: 0
         width: 132
-        height: 103
+        height: 83
       alignment: 9
-      pivot: {x: 0.35, y: 0.28}
+      pivot: {x: 0.35, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a19fc6616e34a4ad1ac9fe62a38088c8
-      internalID: -1488493701
+      spriteID: 6e5fea41e0b854e138e6beb2734a6e85
+      internalID: -175134480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_60
+      rect:
+        serializedVersion: 2
+        x: 7920
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145934d2eaebc4fdab8075e81f82068b
+      internalID: -665905560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_61
+      rect:
+        serializedVersion: 2
+        x: 8052
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb7861a72e2574333aa5575ed7384634
+      internalID: 1752039663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_62
+      rect:
+        serializedVersion: 2
+        x: 8184
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b9af7b33fd1403f9083675a8aaa81b
+      internalID: -990396230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_63
+      rect:
+        serializedVersion: 2
+        x: 8316
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb8f563f09b847f492a8e79277a5dd1
+      internalID: 1418127423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_64
+      rect:
+        serializedVersion: 2
+        x: 8448
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc6494a8844f648df9ab593f1d15af7e
+      internalID: -117230962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_65
+      rect:
+        serializedVersion: 2
+        x: 8580
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b86fb48c19f04a79b708d800dbc87ef
+      internalID: 63241515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_66
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affcc06ab5b474e9c91473824ed5bbae
+      internalID: 1074721617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_67
+      rect:
+        serializedVersion: 2
+        x: 8844
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e545266c6c6e4a2abe415279bb5224d
+      internalID: 397472114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_68
+      rect:
+        serializedVersion: 2
+        x: 8976
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd133799849564c8db668865d5f853ac
+      internalID: -1630409400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_69
+      rect:
+        serializedVersion: 2
+        x: 9108
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5317145b5a29c4df5a7844168a4ae5b8
+      internalID: -1034838907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_70
+      rect:
+        serializedVersion: 2
+        x: 9240
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6d8c85f2b7e4eb5a5a088f6a813d4d
+      internalID: -933648181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_71
+      rect:
+        serializedVersion: 2
+        x: 9372
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1de1f6fa257475883b2c0c951e2609
+      internalID: -28158521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton Summoner-side all_72
+      rect:
+        serializedVersion: 2
+        x: 9504
+        y: 0
+        width: 132
+        height: 83
+      alignment: 9
+      pivot: {x: 0.35, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1bc3acb1b7b470c83e3c3416702ff5
+      internalID: 89911131
       vertices: []
       indices: 
       edges: []
@@ -1420,7 +1706,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dcafad916f66148d3bbce83e1bcd8873
+    spriteID: bb64db7fe1ccf467cbc0896e4075d53e
     internalID: 0
     vertices: []
     indices: 
@@ -1430,68 +1716,81 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":132.0,"y":103.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.2800000011920929},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":132.0,"y":83.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.10000000149011612},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Skeleton Summoner-front all_0: 252576523
-      Skeleton Summoner-front all_1: 659130142
-      Skeleton Summoner-front all_10: 1004924995
-      Skeleton Summoner-front all_11: 501588191
-      Skeleton Summoner-front all_12: 1769568168
-      Skeleton Summoner-front all_13: -1375757374
-      Skeleton Summoner-front all_14: -1048065131
-      Skeleton Summoner-front all_15: 1023137041
-      Skeleton Summoner-front all_16: 1068314891
-      Skeleton Summoner-front all_17: -1730815440
-      Skeleton Summoner-front all_18: 486840067
-      Skeleton Summoner-front all_19: 1605475911
-      Skeleton Summoner-front all_2: 1704704641
-      Skeleton Summoner-front all_20: 33142294
-      Skeleton Summoner-front all_21: 1446051051
-      Skeleton Summoner-front all_22: -1454737557
-      Skeleton Summoner-front all_23: -1417739811
-      Skeleton Summoner-front all_24: 1353357603
-      Skeleton Summoner-front all_25: 1934604387
-      Skeleton Summoner-front all_26: -565252394
-      Skeleton Summoner-front all_27: -1530652642
-      Skeleton Summoner-front all_28: -936722387
-      Skeleton Summoner-front all_29: 361489864
-      Skeleton Summoner-front all_3: 2077690599
-      Skeleton Summoner-front all_30: 885278905
-      Skeleton Summoner-front all_31: -858578960
-      Skeleton Summoner-front all_32: 2097416877
-      Skeleton Summoner-front all_33: 1384712930
-      Skeleton Summoner-front all_34: 176664151
-      Skeleton Summoner-front all_35: 2061379337
-      Skeleton Summoner-front all_36: 1368359734
-      Skeleton Summoner-front all_37: -2044333725
-      Skeleton Summoner-front all_38: -586741897
-      Skeleton Summoner-front all_39: -1711664573
-      Skeleton Summoner-front all_4: 875758851
-      Skeleton Summoner-front all_40: 1948556388
-      Skeleton Summoner-front all_41: -120741733
-      Skeleton Summoner-front all_42: 1637132245
-      Skeleton Summoner-front all_43: -339597087
-      Skeleton Summoner-front all_44: -1672992944
-      Skeleton Summoner-front all_45: -587632861
-      Skeleton Summoner-front all_46: 236835760
-      Skeleton Summoner-front all_47: 1545534268
-      Skeleton Summoner-front all_48: -1541517626
-      Skeleton Summoner-front all_49: 1827157607
-      Skeleton Summoner-front all_5: 1384666019
-      Skeleton Summoner-front all_50: -589566343
-      Skeleton Summoner-front all_51: -1603470346
-      Skeleton Summoner-front all_52: -1281355746
-      Skeleton Summoner-front all_53: -276496363
-      Skeleton Summoner-front all_54: 2061950593
-      Skeleton Summoner-front all_55: 1974123853
-      Skeleton Summoner-front all_56: -1095696770
-      Skeleton Summoner-front all_57: 780822470
-      Skeleton Summoner-front all_58: 1633182110
-      Skeleton Summoner-front all_59: -1488493701
-      Skeleton Summoner-front all_6: 1761380544
-      Skeleton Summoner-front all_7: -4932316
-      Skeleton Summoner-front all_8: 1822455201
-      Skeleton Summoner-front all_9: 1418262948
+      Skeleton Summoner-side all_0: 994515673
+      Skeleton Summoner-side all_1: -1435907686
+      Skeleton Summoner-side all_10: 730115607
+      Skeleton Summoner-side all_11: -1749038430
+      Skeleton Summoner-side all_12: -32828992
+      Skeleton Summoner-side all_13: -307941159
+      Skeleton Summoner-side all_14: 495804482
+      Skeleton Summoner-side all_15: -682198016
+      Skeleton Summoner-side all_16: -1584354820
+      Skeleton Summoner-side all_17: -1352046310
+      Skeleton Summoner-side all_18: 1581345870
+      Skeleton Summoner-side all_19: -2032607393
+      Skeleton Summoner-side all_2: -18496469
+      Skeleton Summoner-side all_20: 1519443411
+      Skeleton Summoner-side all_21: -696919651
+      Skeleton Summoner-side all_22: 1848438083
+      Skeleton Summoner-side all_23: 856486429
+      Skeleton Summoner-side all_24: 35051676
+      Skeleton Summoner-side all_25: 85293466
+      Skeleton Summoner-side all_26: -1805650104
+      Skeleton Summoner-side all_27: -1498919413
+      Skeleton Summoner-side all_28: 2147156582
+      Skeleton Summoner-side all_29: -813303771
+      Skeleton Summoner-side all_3: 858833557
+      Skeleton Summoner-side all_30: -351428765
+      Skeleton Summoner-side all_31: -1441931071
+      Skeleton Summoner-side all_32: 857633851
+      Skeleton Summoner-side all_33: -751328808
+      Skeleton Summoner-side all_34: -167357147
+      Skeleton Summoner-side all_35: -1074992382
+      Skeleton Summoner-side all_36: 1950298843
+      Skeleton Summoner-side all_37: -444408069
+      Skeleton Summoner-side all_38: -1986221463
+      Skeleton Summoner-side all_39: 1032179612
+      Skeleton Summoner-side all_4: 800375094
+      Skeleton Summoner-side all_40: 1033570239
+      Skeleton Summoner-side all_41: -239054279
+      Skeleton Summoner-side all_42: 1171226932
+      Skeleton Summoner-side all_43: -1890105653
+      Skeleton Summoner-side all_44: -1343011277
+      Skeleton Summoner-side all_45: -1225412523
+      Skeleton Summoner-side all_46: -1078215779
+      Skeleton Summoner-side all_47: 785139631
+      Skeleton Summoner-side all_48: 944200955
+      Skeleton Summoner-side all_49: -141213498
+      Skeleton Summoner-side all_5: 1826086585
+      Skeleton Summoner-side all_50: -285518073
+      Skeleton Summoner-side all_51: 2053384724
+      Skeleton Summoner-side all_52: 576635602
+      Skeleton Summoner-side all_53: 471759884
+      Skeleton Summoner-side all_54: 2071965800
+      Skeleton Summoner-side all_55: -443610822
+      Skeleton Summoner-side all_56: 1389290531
+      Skeleton Summoner-side all_57: 405462399
+      Skeleton Summoner-side all_58: 665561467
+      Skeleton Summoner-side all_59: -175134480
+      Skeleton Summoner-side all_6: -956935381
+      Skeleton Summoner-side all_60: -665905560
+      Skeleton Summoner-side all_61: 1752039663
+      Skeleton Summoner-side all_62: -990396230
+      Skeleton Summoner-side all_63: 1418127423
+      Skeleton Summoner-side all_64: -117230962
+      Skeleton Summoner-side all_65: 63241515
+      Skeleton Summoner-side all_66: 1074721617
+      Skeleton Summoner-side all_67: 397472114
+      Skeleton Summoner-side all_68: -1630409400
+      Skeleton Summoner-side all_69: -1034838907
+      Skeleton Summoner-side all_7: 501726620
+      Skeleton Summoner-side all_70: -933648181
+      Skeleton Summoner-side all_71: -28158521
+      Skeleton Summoner-side all_72: 89911131
+      Skeleton Summoner-side all_8: -843669542
+      Skeleton Summoner-side all_9: 1218605423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

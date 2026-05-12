@@ -83,8 +83,6 @@ public class InputController : MonoBehaviour
                     OnNumKeyDown?.Invoke(this, new NumDownInfo(5));
                 }
         }
-       
-        
 
     }
 

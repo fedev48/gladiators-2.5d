@@ -9,6 +9,7 @@ public class AnimationControl : MonoBehaviour
     [SerializeField] private Transform visualsTransform;
     [SerializeField] private Animator animator;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private PlayerController playerController;
 
     [Header("Rotation")]
     [SerializeField] private float visualPitch = 34f;
@@ -40,6 +41,16 @@ public class AnimationControl : MonoBehaviour
         mainCamera = Camera.main;
         previousPosition = transform.position;
         if (agent == null) agent = GetComponentInParent<NavMeshAgent>();
+        playerController.OnAttack     += TriggerAttack;
+        playerController.OnSummon     += TriggerSummon;
+        playerController.OnActionEnds += OnActionFinished;
+        
+    }
+    void OnDestroy()
+    {
+        playerController.OnAttack     -= TriggerAttack;
+        playerController.OnSummon     -= TriggerSummon;
+        playerController.OnActionEnds -= OnActionFinished;
     }
 
     void LateUpdate()
@@ -72,9 +83,7 @@ public class AnimationControl : MonoBehaviour
         animator.SetBool(ParamIsWalking, isWalking);
 
        
-        if (!isActing &&  agent.desiredVelocity.magnitude > facingThreshold) UpdateDirection(agent != null ? agent.desiredVelocity : smoothedVelocity);
-        Debug.Log("desiredVelocity "+agent.desiredVelocity.magnitude);
-        Debug.Log("Direction "+animator.GetInteger(ParamDirection));
+        if (!isActing && agent.desiredVelocity.magnitude > facingThreshold) UpdateDirection(agent != null ? agent.desiredVelocity : smoothedVelocity);
 
     }
 
@@ -89,11 +98,6 @@ public class AnimationControl : MonoBehaviour
         isActing = true;
         animator.SetTrigger(ParamSummon);
     }
-
-    public void OnAttackImpact() { }
-
-    public void OnSummonSpawn() { }
-
     public void OnActionFinished()
     {
         isActing = false;

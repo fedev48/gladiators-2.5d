@@ -4,17 +4,24 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine.AI;
+using System.Collections;
 
 public class PlayerController : Unit
 {
     private delegate void PerformRightClickActionDelegate(Vector3 target);
-
     private PerformRightClickActionDelegate performRightClickActionDelegate;
+    private bool isActing;
+    public event Action OnAttack;
+    public event Action OnSummon;
+    public event Action OnActionEnds;
 
-    [Header("spells")]
+
+    [Header("Attacks")]
     public List<IPlayerSpell> playerSpells = new List<IPlayerSpell>();
     public static IPlayerSpell currentSpell;
     public SpellType spellType;
+    private const float attackAnimationTime = 1.5f;
+    private const float summonAnimationTime = 1.5f;
 
     
 
@@ -38,8 +45,51 @@ public class PlayerController : Unit
         NetworkVariableWritePermission.Server
     );
 
+    private enum ActionType
+    {
+        Attack,
+        Summon
+    }
     [SerializeField] private float destinationSyncTolerance = 0.01f;
     
+    void Update()
+    {
+        if (isActing) return;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(ActionCorroutine(attackAnimationTime, ActionType.Attack));
+            AttackOnServerRpc(transform.position);
+            OnAttack?.Invoke();
+
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StartCoroutine(ActionCorroutine(attackAnimationTime, ActionType.Summon));
+            SummonOnServerRpc(transform.position);
+            OnSummon?.Invoke();
+        }
+    }
+
+    void FixedUpdate()
+    {
+
+        if (IsServer)return;
+        if (!IsOwner)return;
+        if (isActing)return;
+
+        Move(false, false);
+        MovePlayerOnServerRpc();
+    }
+
+    void LateUpdate()
+    {
+        if (IsOwner) return;
+        if (IsServer) return;
+
+        agent.nextPosition = transform.position;
+    }
+
 
     public override void OnNetworkSpawn()
     {
@@ -87,21 +137,7 @@ public class PlayerController : Unit
         base.OnNetworkDespawn();
     }
 
-    void FixedUpdate()
-    {
-
-        if (IsServer)
-        { 
-            // if (ArePointsClose(syncedDestination.Value, agent.destination, destinationSyncTolerance)) syncedDestination.Value = agent.destination;
-
-            return;
-        }
-
-        if (!IsOwner) return;
-
-        Move(false, false);
-        MovePlayerOnServerRpc();
-    }
+   
 
     private void Move(bool isServer, bool isRollback, Vector3 nextPosition = default)
     {
@@ -115,7 +151,7 @@ public class PlayerController : Unit
 
         if (!isServer && !isRollback)
         {
-            AddInputToHistory(nextPosition);
+            AddStepToHistory(nextPosition);
         }
        
 
@@ -142,7 +178,7 @@ public class PlayerController : Unit
         anticipatedNetworkTransform.AnticipateMove(targetPosition);
     }
 
-    private void AddInputToHistory(Vector3 nextPosition)
+    private void AddStepToHistory(Vector3 nextPosition)
     {
         timedAgentSteps.Add(new TimedInput
         {
@@ -151,11 +187,7 @@ public class PlayerController : Unit
         });
     }
 
-    [Rpc(SendTo.Server)]
-    private void MovePlayerOnServerRpc()
-    {
-        Move(true, false);
-    }
+   
 
     void OnDisable()
     {
@@ -199,10 +231,17 @@ public class PlayerController : Unit
     {
         if (!agent.isOnNavMesh) return;
 
-        agent.SetDestination(targetPosition);
         pendingDestinations.Add(targetPosition);
 
+        agent.SetDestination(targetPosition);
         CalculateServerPathRpc(targetPosition);
+    }
+    #region ServerRpcs
+
+    [Rpc(SendTo.Server)]
+    private void MovePlayerOnServerRpc()
+    {
+        Move(true, false);
     }
 
     [Rpc(SendTo.Server)]
@@ -213,7 +252,37 @@ public class PlayerController : Unit
         syncedDestination.Value = targetPosition;
         agent.SetDestination(targetPosition);
     }
+    [Rpc(SendTo.Server)]
+    private void SummonOnServerRpc(Vector3 position)
+    {
+        transform.position = position; //This might require revision with hit targets. With high latency there was a discrepancy in positions at attack events, fix works atleast in isolation
+        StartCoroutine(ActionCorroutine(summonAnimationTime, ActionType.Summon));
+    }
 
+    [Rpc(SendTo.Server)]
+    void AttackOnServerRpc(Vector3 position)
+    {
+        transform.position = position; //This might require revision with hit targets. With high latency there was a discrepancy in positions at attack events, fix works atleast in isolation
+        StartCoroutine(ActionCorroutine(attackAnimationTime, ActionType.Attack));
+    }
+    #endregion
+    #region Coroutines
+
+    private IEnumerator ActionCorroutine(float timeAttack, ActionType actionType)
+    {
+        agent.isStopped = true;
+        isActing = true;
+        yield return new WaitForSeconds(timeAttack);
+        isActing = false;
+        agent.nextPosition = transform.position;
+        agent.isStopped = false;
+        OnActionEnds?.Invoke();
+    }
+
+    
+
+
+    #endregion
     private void OnSyncedDestinationChanged(Vector3 previousValue, Vector3 newValue)
     {
         if (!IsSpawned) return;
@@ -233,7 +302,6 @@ public class PlayerController : Unit
         agent.SetDestination(newValue);
     }
 
-    private void OnMoveSpeedChanged(float _, float next) => agent.speed = next;
 
     private bool ArePointsClose(Vector3 a, Vector3 b, float tolerance)
     {
@@ -286,14 +354,7 @@ public class PlayerController : Unit
     {
         performRightClickActionDelegate(targetPosition);
     }
-
-    void LateUpdate()
-    {
-        if (IsOwner) return;
-        if (IsServer) return;
-
-        agent.nextPosition = transform.position;
-    }
+    
 }
 
 public enum SpellType
@@ -307,3 +368,4 @@ public struct TimedInput
     public double time;
     public Vector3 stampedTarget;
 }
+
