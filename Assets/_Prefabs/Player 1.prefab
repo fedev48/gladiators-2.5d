@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 2330895236867208601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.29, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 3661588040989102571}
   - component: {fileID: 9152854283933916368}
   - component: {fileID: 6851248400643092613}
+  - component: {fileID: 34752470527679179}
   m_Layer: 10
   m_Name: Player 1
   m_TagString: Untagged
@@ -397,9 +398,36 @@ MonoBehaviour:
   animator: {fileID: 8545232494161232539}
   agent: {fileID: 0}
   playerController: {fileID: 9152854283933916368}
-  visualPitch: 34
+  visualPitch: 33
   speedSmooth: 12
   runEnterThreshold: 0.22
   runExitThreshold: 0.12
   facingThreshold: 0.8
   frontAngle: 20
+--- !u!54 &34752470527679179
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9050738593715133282}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

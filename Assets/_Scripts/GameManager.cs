@@ -9,6 +9,7 @@ public class GameManager : NetworkBehaviour
     public static GameManager Instance {private set; get;}
 
     [SerializeField] GameObject playerPrefab;
+    [SerializeField] bool isDebuuging;
 
     [Header("Gate Configuration")]
     [SerializeField] int regularRoundDuration = 60;
@@ -43,7 +44,14 @@ public class GameManager : NetworkBehaviour
         }
         Instance = this;
     }
-
+    void Start()
+    {
+        if (isDebuuging)
+        {
+            NetworkManager.Singleton.StartHost(); 
+            StartGameServer();
+        }
+    }
     public override void OnNetworkSpawn()
     {
         if (IsServer)
@@ -85,8 +93,8 @@ public class GameManager : NetworkBehaviour
     {
         
         if (!IsServer) return;
-        if (!other.TryGetComponent<NetworkObject>(out NetworkObject netObj)) return;
-        Debug.Log("AlgoSalio");
+        if (!other.TryGetComponent(out NetworkObject netObj)) return;
+        
         playersOutside++;
 
         if (playersOutside >= NetworkManager.Singleton.ConnectedClients.Count)

@@ -70,18 +70,16 @@ public class PlayerController : Unit
             OnSummon?.Invoke();
         }
     }
-
     void FixedUpdate()
     {
+        if (IsServer && !IsOwner) return;
+        if (!IsOwner) return;
+        if (isActing) return;
 
-        if (IsServer)return;
-        if (!IsOwner)return;
-        if (isActing)return;
-
-        Move(false, false);
-        MovePlayerOnServerRpc();
+       
+        Move(IsServer, false);
+        if (!IsServer) MovePlayerOnServerRpc();
     }
-
     void LateUpdate()
     {
         if (IsOwner) return;
@@ -89,8 +87,6 @@ public class PlayerController : Unit
 
         agent.nextPosition = transform.position;
     }
-
-
     public override void OnNetworkSpawn()
     {
         Debug.Log("player spawned");
@@ -99,7 +95,7 @@ public class PlayerController : Unit
         agent.updateRotation = false;
        
 
-        if (!IsServer && Camera.main != null)
+        if (IsOwner && Camera.main != null)
             camForward.Value = Vector3.ProjectOnPlane(Camera.main.transform.forward, Vector3.up).normalized;
 
         if (IsOwner && !IsServer)
@@ -136,9 +132,6 @@ public class PlayerController : Unit
         InputController.Instance.OnNumKeyDown -= OnNumKeyDown;
         base.OnNetworkDespawn();
     }
-
-   
-
     private void Move(bool isServer, bool isRollback, Vector3 nextPosition = default)
     {
 
@@ -186,9 +179,6 @@ public class PlayerController : Unit
             stampedTarget = nextPosition
         });
     }
-
-   
-
     void OnDisable()
     {
         if (!IsOwner) return;
@@ -301,13 +291,10 @@ public class PlayerController : Unit
 
         agent.SetDestination(newValue);
     }
-
-
     private bool ArePointsClose(Vector3 a, Vector3 b, float tolerance)
     {
         return Vector3.SqrMagnitude(a - b) <= tolerance;
     }
-
     public override void OnReanticipate(double lastRoundTripTime)
     {
        
@@ -339,17 +326,14 @@ public class PlayerController : Unit
             anticipatedNetworkTransform.Smooth(previousState, anticipatedNetworkTransform.AnticipatedState, 0.5f);
         }
     }
-
     public void RemoveBefore(double time)
     {
         timedAgentSteps.RemoveAll(x => x.time < time);
     }
-
     public void Clear()
     {
         timedAgentSteps.Clear();
     }
-
     public override void PerformRightClickAction(Vector3 targetPosition)
     {
         performRightClickActionDelegate(targetPosition);
