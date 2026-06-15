@@ -1691,7 +1691,7 @@ MonoBehaviour:
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
     Address: 127.0.0.1
-    Port: 7777
+    Port: 7778
     ServerListenAddress: 127.0.0.1
     ClientBindPort: 0
   DebugSimulator:
@@ -2049,7 +2049,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   ShowTopMostFoldoutHeaderGroup: 1
-  playerPrefab: {fileID: 9050738593715133282, guid: 957e6fe3d904446ec8a7c26cb4a61520, type: 3}
+  playerPrefab: {fileID: 9050738593715133282, guid: c9e9c0fa279ae4c2eb79772a4a002715, type: 3}
+  isDebuuging: 1
   regularRoundDuration: 60
   gateTransform: {fileID: 812565711}
   gameAuthoritativeState:

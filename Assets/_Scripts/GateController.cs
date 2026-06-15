@@ -54,7 +54,6 @@ public class GateController : NetworkBehaviour
     {
         foreach( ParticleSystem gateParticle in gateParticles)
         {
-            
             gateParticle.Play();
         }
         
