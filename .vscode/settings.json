@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Copia de Gladiators Project.slnx"
+    "dotnet.defaultSolution": "Gladiators Project.slnx"
 }
