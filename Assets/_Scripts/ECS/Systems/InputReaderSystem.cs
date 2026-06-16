@@ -5,7 +5,7 @@ using Unity.Mathematics;
 public partial class InputReaderSystem : SystemBase
 {
     private InputSystem_Actions inputSystem;
-    private static readonly quaternion CameraRot = quaternion.RotateY(math.radians(-135f));
+    private quaternion cameraRot;
 
     protected override void OnCreate()
     {
@@ -13,10 +13,15 @@ public partial class InputReaderSystem : SystemBase
         inputSystem.Enable();
     }
 
+    protected override void OnStartRunning()
+    {
+        cameraRot = quaternion.RotateY(Camera.main.transform.eulerAngles.y * math.TORADIANS);
+    }
+
     protected override void OnUpdate()
     {
         var raw = inputSystem.Player.Move.ReadValue<Vector2>();
-        float3 cameraFixedDirection = math.mul(CameraRot, new float3(raw.x, 0, raw.y));
+        float3 cameraFixedDirection = math.mul(cameraRot, new float3(raw.x, 0, raw.y));
 
         foreach (var moveDirection in SystemAPI.Query<RefRW<CharacterMoveDirection>>())
         {

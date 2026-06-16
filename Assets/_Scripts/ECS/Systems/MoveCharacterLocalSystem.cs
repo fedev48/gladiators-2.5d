@@ -1,22 +1,19 @@
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
-using Unity.Transforms;
-using UnityEngine;
+using Unity.Physics;
 [BurstCompile]
 public partial struct MoveCharacterLocalSystem : ISystem
 {
     public void OnUpdate(ref SystemState state)
     {
-        float deltaTime = SystemAPI.Time.DeltaTime;
-
-        foreach (var (moveDirection, speed, transform) in SystemAPI
-            .Query<RefRO<CharacterMoveDirection>, RefRO<CharacterMoveSpeed>, RefRW<LocalTransform>>()
-            .WithAll<Player>())
+        foreach (var (moveDirection, speed, velocity) in SystemAPI
+            .Query<RefRO<CharacterMoveDirection>, RefRO<CharacterMoveSpeed>, RefRW<PhysicsVelocity>>()
+            .WithAll<PlayerTag>())
         {
             float3 direction = moveDirection.ValueRO.value;
-            float3 newPosition = transform.ValueRO.Position + direction * (speed.ValueRO.value * deltaTime);
-            transform.ValueRW.Position = newPosition;
+            velocity.ValueRW.Linear = direction * speed.ValueRO.value;
+            velocity.ValueRW.Angular = float3.zero;
         }
     }
 }

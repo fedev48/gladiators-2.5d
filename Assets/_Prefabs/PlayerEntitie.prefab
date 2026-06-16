@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1521567159850209221}
   - component: {fileID: 1319801222310220513}
   - component: {fileID: 7854944605843050306}
-  m_Layer: 0
+  - component: {fileID: 8956224825062410156}
+  m_Layer: 10
   m_Name: PlayerEntitie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,3 +128,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1be8750526db45d3a34611ae5a212ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAuthoring
+  playerSpeed: 5
+--- !u!54 &8956224825062410156
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905694199307859327}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 116
+  m_CollisionDetection: 0

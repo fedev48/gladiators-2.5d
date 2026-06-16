@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Move : MonoBehaviour
+public class CameraTargetKeyboardInputMove : MonoBehaviour
 {
     [SerializeField] float speed = 5f;
 
