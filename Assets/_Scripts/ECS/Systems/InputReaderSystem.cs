@@ -27,6 +27,20 @@ public partial class InputReaderSystem : SystemBase
         {
             moveDirection.ValueRW.value = new float3(cameraFixedDirection.x, 0, cameraFixedDirection.z);
         }
+
+        if (inputSystem.Player.Interact.WasPressedThisFrame())
+        {
+            foreach ((RefRO<SkeletonSpellConfig> spellConfig, Entity entity) in
+                SystemAPI.Query<RefRO<SkeletonSpellConfig>>().WithEntityAccess())
+            {
+                EntityManager.SetComponentData(entity, new SkeletonSpawnBurst
+                {
+                    remaining = spellConfig.ValueRO.spawnCount,
+                    timer     = 0f
+                });
+                EntityManager.SetComponentEnabled<SkeletonSpawnBurst>(entity, true);
+            }
+        }
     }
 
     protected override void OnStopRunning() => inputSystem.Disable();

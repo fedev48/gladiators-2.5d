@@ -1,0 +1,67 @@
+using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Physics;
+using UnityEngine;
+
+public class SkeletonAuthoring : MonoBehaviour
+{
+    public float accelerationMin = 2f;
+    public float accelerationMax = 8f;
+    public float maxSpeed        = 4f;
+
+    public class Baker : Baker<SkeletonAuthoring>
+    {
+        public override void Bake(SkeletonAuthoring authoring)
+        {
+            Entity entity = GetEntity(TransformUsageFlags.Dynamic);
+
+            AddComponent(entity, new SkeletonTag());
+            AddComponent(entity, new ShouldSnapToFloorTag());
+            AddComponent(entity, new SkeletonSpawnState());
+            AddComponent(entity, new SkeletonFollowState());
+            AddComponent(entity, new SkeletonAttackState());
+            AddComponent(entity, new SkeletonConfig
+            {
+                accelerationMin = authoring.accelerationMin,
+                accelerationMax = authoring.accelerationMax,
+                maxSpeed        = authoring.maxSpeed
+            });
+
+            SetComponentEnabled<ShouldSnapToFloorTag>(entity, false);
+            SetComponentEnabled<SkeletonSpawnState>(entity, true);
+            SetComponentEnabled<SkeletonFollowState>(entity, false);
+            SetComponentEnabled<SkeletonAttackState>(entity, false);
+        }
+    }
+}
+
+[WorldSystemFilter(WorldSystemFilterFlags.BakingSystem)]
+public partial struct SkeletonFreezeRotationBakingSystem : ISystem
+{
+    public readonly void OnUpdate(ref SystemState state)
+    {
+        foreach (var mass in SystemAPI.Query<RefRW<PhysicsMass>>().WithAll<SkeletonTag>())
+            mass.ValueRW.InverseInertia = float3.zero;
+    }
+}
+
+public struct SkeletonConfig : IComponentData
+{
+    public float accelerationMin;
+    public float accelerationMax;
+    public float maxSpeed;
+    public float acceleration;
+}
+
+public struct SkeletonTag        : IComponentData {}
+public struct SkeletonSpawnState : IComponentData, IEnableableComponent {}
+public struct SkeletonFollowState: IComponentData, IEnableableComponent {}
+public struct SkeletonAttackState: IComponentData, IEnableableComponent {}
+
+public struct SkeletonSpawnData : IComponentData
+{
+    public float  height;
+    public float3 surfacePos;
+    public float3 followOffset;
+    public float  currentSpeed;
+}

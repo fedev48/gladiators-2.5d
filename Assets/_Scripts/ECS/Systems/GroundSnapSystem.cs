@@ -7,7 +7,6 @@ using Unity.Transforms;
 public partial struct GroundSnapSystem : ISystem
 {
     private int groundMask;
-    private const float yOffset = 1f;
 
     public void OnCreate(ref SystemState state)
     {
@@ -16,13 +15,14 @@ public partial struct GroundSnapSystem : ISystem
 
     public void OnUpdate(ref SystemState state)
     {
-        foreach (var (transform, _) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<PlayerTag>>())
+
+        foreach (var (transform, _) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<ShouldSnapToFloorTag>>())
         {
-            float3 origin = transform.ValueRO.Position + new float3(0, yOffset, 0);
-            if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 3f, groundMask))
+            float3 origin = transform.ValueRO.Position + new float3(0, 0.5f, 0);
+            if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 10f, groundMask))
             {
                 var pos = transform.ValueRO.Position;
-                pos.y = hit.point.y + yOffset;
+                pos.y = hit.point.y;
                 transform.ValueRW.Position = pos;
             }
         }
