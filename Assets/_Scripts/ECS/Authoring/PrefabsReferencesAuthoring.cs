@@ -4,6 +4,7 @@ using UnityEngine;
 public class PrefabsReferencesAuthoring : MonoBehaviour
 {
     public GameObject skeletonPrefabGameObject;
+    public GameObject bulletPrefabGameObject;
 
     public class Baker : Baker<PrefabsReferencesAuthoring>
     {
@@ -12,7 +13,8 @@ public class PrefabsReferencesAuthoring : MonoBehaviour
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new EntitiesReferences
             {
-                skeletonPrefabEntity = GetEntity(authoring.skeletonPrefabGameObject, TransformUsageFlags.Dynamic)
+                skeletonPrefabEntity = GetEntity(authoring.skeletonPrefabGameObject, TransformUsageFlags.Dynamic),
+                bulletPrefabEntity = GetEntity(authoring.bulletPrefabGameObject, TransformUsageFlags.Dynamic)
             });
         }
     }
@@ -21,4 +23,5 @@ public class PrefabsReferencesAuthoring : MonoBehaviour
 public struct EntitiesReferences : IComponentData
 {
     public Entity skeletonPrefabEntity;
+    public Entity bulletPrefabEntity;
 }

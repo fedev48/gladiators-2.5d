@@ -10,7 +10,7 @@ public partial struct SkeletonEmergeSystem : ISystem
     [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
-        float dt = SystemAPI.Time.DeltaTime;
+        float deltaTime = SystemAPI.Time.DeltaTime;
         float time = (float)SystemAPI.Time.ElapsedTime;
 
         foreach ((RefRW<LocalTransform> transform,
@@ -40,7 +40,7 @@ public partial struct SkeletonEmergeSystem : ISystem
             float3 current = transform.ValueRO.Position;
             float targetY  = spawnData.ValueRO.surfacePos.y;
 
-            float newY   = math.min(current.y + spawnData.ValueRO.height * dt, targetY);
+            float newY   = math.min(current.y + spawnData.ValueRO.height * deltaTime, targetY);
             float shake  = math.sin(time * 40f) * 0.04f;
 
             transform.ValueRW.Position = new float3(

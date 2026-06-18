@@ -21,7 +21,11 @@ public class PlayerAuthoring : MonoBehaviour
             AddComponent(entity, new CharacterMoveSpeed { value = authoring.playerSpeed });
             AddComponent(entity, new CharacterMoveDirection {});
             AddComponent(entity, new ShouldSnapToFloorTag());
+            AddComponent(entity, new PhysicsGravityFactor { Value = 0f });
             AddComponent(entity, new SummonSkeletonEvent());
+            AddComponent(entity, new BulletSpellConfig());
+            AddComponent(entity, new FireBulletEvent());
+            SetComponentEnabled<FireBulletEvent>(entity, false);
             AddComponent(entity, new SkeletonSpellConfig
             {
                 minRadius    = authoring.skeletonSpawnMinRadius,
@@ -54,6 +58,11 @@ public struct SkeletonSpawnBurst : IComponentData, IEnableableComponent
 public struct PlayerTag : IComponentData {}
 public struct ShouldSnapToFloorTag : IComponentData, IEnableableComponent {}
 public struct SummonSkeletonEvent : IComponentData, IEnableableComponent {}
+public struct BulletSpellConfig : IComponentData {}
+public struct FireBulletEvent : IComponentData, IEnableableComponent
+{
+    public float3 direction;
+}
 public struct CharacterMoveDirection : IComponentData
 {
     public float3 value;

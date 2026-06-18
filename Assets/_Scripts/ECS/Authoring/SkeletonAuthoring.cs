@@ -26,6 +26,7 @@ public class SkeletonAuthoring : MonoBehaviour
                 accelerationMax = authoring.accelerationMax,
                 maxSpeed        = authoring.maxSpeed
             });
+            AddComponent(entity, new PhysicsGravityFactor { Value = 0f });
 
             SetComponentEnabled<ShouldSnapToFloorTag>(entity, false);
             SetComponentEnabled<SkeletonSpawnState>(entity, true);

@@ -6,6 +6,7 @@ public partial class InputReaderSystem : SystemBase
 {
     private InputSystem_Actions inputSystem;
     private quaternion cameraRot;
+    private float3 lastInputDirection = new float3(0f, 0f, 1f);
 
     protected override void OnCreate()
     {
@@ -23,6 +24,12 @@ public partial class InputReaderSystem : SystemBase
         var raw = inputSystem.Player.Move.ReadValue<Vector2>();
         float3 cameraFixedDirection = math.mul(cameraRot, new float3(raw.x, 0, raw.y));
 
+        float3 flatDirection = new float3(cameraFixedDirection.x, 0f, cameraFixedDirection.z);
+        if (math.length(flatDirection) > 0.25f) lastInputDirection = math.normalize(flatDirection);
+
+      
+        
+
         foreach (var moveDirection in SystemAPI.Query<RefRW<CharacterMoveDirection>>())
         {
             moveDirection.ValueRW.value = new float3(cameraFixedDirection.x, 0, cameraFixedDirection.z);
@@ -39,6 +46,16 @@ public partial class InputReaderSystem : SystemBase
                     timer     = 0f
                 });
                 EntityManager.SetComponentEnabled<SkeletonSpawnBurst>(entity, true);
+            }
+        }
+
+        if (inputSystem.Player.Attack.WasPressedThisFrame())
+        {
+            foreach ((RefRO<BulletSpellConfig> _, Entity entity) in
+                SystemAPI.Query<RefRO<BulletSpellConfig>>().WithEntityAccess())
+            {
+                EntityManager.SetComponentData(entity, new FireBulletEvent { direction = lastInputDirection });
+                EntityManager.SetComponentEnabled<FireBulletEvent>(entity, true);
             }
         }
     }

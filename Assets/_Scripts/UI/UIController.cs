@@ -8,12 +8,12 @@ public class UIController : MonoBehaviour
 
     void Start()
     {
-        // int targetHeight = 480;
-        // int targetWidth = Mathf.RoundToInt(targetHeight * (float)Screen.width / Screen.height);
-        // Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.FullScreenWindow);
+        int targetHeight = 480;
+        int targetWidth = Mathf.RoundToInt(targetHeight * (float)Screen.width / Screen.height);
+        Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.FullScreenWindow);
 
-        // Application.targetFrameRate = 300;
-        // QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 300;
+        QualitySettings.vSyncCount = 0;
 
         GameManager.Instance.gameAuthoritativeState.OnValueChanged += GameManager_OnGameStateChanged;
         GameManager.Instance.roundTimer.OnValueChanged += GameManager_OnRoundTimerChanged;

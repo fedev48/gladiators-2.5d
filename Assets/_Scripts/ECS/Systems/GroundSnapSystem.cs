@@ -18,8 +18,8 @@ public partial struct GroundSnapSystem : ISystem
 
         foreach (var (transform, _) in SystemAPI.Query<RefRW<LocalTransform>, RefRO<ShouldSnapToFloorTag>>())
         {
-            float3 origin = transform.ValueRO.Position + new float3(0, 0.5f, 0);
-            if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 10f, groundMask))
+            float3 origin = transform.ValueRO.Position + new float3(0, 5f, 0);
+            if (Physics.Raycast(origin, Vector3.down, out RaycastHit hit, 50f, groundMask))
             {
                 var pos = transform.ValueRO.Position;
                 pos.y = hit.point.y;

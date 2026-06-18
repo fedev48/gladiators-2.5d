@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrefabsReferencesAuthoring
   skeletonPrefabGameObject: {fileID: 4810914525102015082, guid: 19fa94cf8e80b4c80814c457ca41fc83, type: 3}
+  bulletPrefabGameObject: {fileID: 8436005868776263129, guid: 6fa2924306e684245b026d6f62cdf7b0, type: 3}
 --- !u!1001 &4275850393762977710
 PrefabInstance:
   m_ObjectHideFlags: 0
