@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Insects
       objectReference: {fileID: 0}
+    - target: {fileID: 950227161862282175, guid: 8651d6691f3384e4da55a2f2be432202, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3145994842375234950, guid: 8651d6691f3384e4da55a2f2be432202, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.07
@@ -933,7 +937,7 @@ MonoBehaviour:
   verticalOffset: -0.8
   pixelMaterial: {fileID: 2100000, guid: 3ea610318bbb44006adfb9cf48e634ab, type: 2}
   subPixelMaterial: {fileID: 2100000, guid: 28cdaeb9ea9a44b2b82646ff47554a21, type: 2}
-  snapToPixelGrid: 0
+  snapToPixelGrid: 1
   useSubPixel: 1
 --- !u!1 &331681494
 GameObject:
