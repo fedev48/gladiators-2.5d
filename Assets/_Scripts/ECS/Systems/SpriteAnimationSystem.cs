@@ -1,45 +1,41 @@
+using Unity.Burst;
 using Unity.Entities;
-using UnityEngine;
+using Unity.Mathematics;
 
-public partial class SpriteAnimationSystem : SystemBase
+[BurstCompile]
+public partial struct SpriteAnimationSystem : ISystem
 {
-    protected override void OnUpdate()
+    [BurstCompile]
+    public readonly void OnUpdate(ref SystemState state)
     {
-        float dt = SystemAPI.Time.DeltaTime;
+        float deltaTime = SystemAPI.Time.DeltaTime;
 
-        foreach (var (stateRef, clips, frames, entity) in
+        foreach (var (stateRef, clips, frames, uvRef) in
             SystemAPI.Query<RefRW<SpriteAnimationState>,
                            DynamicBuffer<AnimationClipData>,
-                           DynamicBuffer<SpriteFrameElement>>()
-                     .WithEntityAccess())
+                           DynamicBuffer<SpriteFrameElement>,
+                           RefRW<SpriteUVRect>>())
         {
-            ref var state = ref stateRef.ValueRW;
+            ref var entityAnimationState = ref stateRef.ValueRW;
 
-            var authoring = EntityManager.GetComponentObject<SpriteAnimatorAuthoring>(entity);
-            state.currentAnimation = Mathf.Clamp(authoring.currentAnimation, 0, clips.Length - 1);
-
-            // Reset frame when animation changes
-            if (state.currentAnimation != state.prevAnimation)
+            int anim = math.clamp(entityAnimationState.currentAnimation, 0, clips.Length - 1);
+            if (anim != entityAnimationState.prevAnimation)
             {
-                state.currentFrame  = 0;
-                state.elapsed       = 0f;
-                state.prevAnimation = state.currentAnimation;
+                entityAnimationState.currentAnimation = anim;
+                entityAnimationState.currentFrame     = 0;
+                entityAnimationState.elapsed          = 0f;
+                entityAnimationState.prevAnimation    = anim;
             }
 
-            var clip = clips[state.currentAnimation];
+            var clip = clips[entityAnimationState.currentAnimation];
             if (clip.frameCount == 0) continue;
 
-            state.elapsed += dt;
-            float frameDuration = 1f / clip.fps;
+            entityAnimationState.elapsed += deltaTime;
+            if (entityAnimationState.elapsed < 1f / clip.fps) continue;
 
-            if (state.elapsed < frameDuration) continue;
-
-            state.elapsed     -= frameDuration;
-            state.currentFrame = (state.currentFrame + 1) % clip.frameCount;
-
-            var sr = EntityManager.GetComponentObject<SpriteRenderer>(entity);
-            if (sr != null)
-                sr.sprite = frames[clip.startIndex + state.currentFrame].sprite.Value;
+            entityAnimationState.elapsed      -= 1f / clip.fps;
+            entityAnimationState.currentFrame  = (entityAnimationState.currentFrame + 1) % clip.frameCount;
+            uvRef.ValueRW.value = frames[clip.startIndex + entityAnimationState.currentFrame].uv;
         }
     }
 }

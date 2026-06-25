@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
 using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Rendering;
 using UnityEngine;
 
 public class SpriteAnimatorAuthoring : MonoBehaviour
 {
     public List<SpriteAnimationClip> animations;
-    public int initialAnimation  = 0;
-    public int currentAnimation  = 0;
+    public int initialAnimation = 0;
+    public int currentAnimation = 0;
 
     public class Baker : Baker<SpriteAnimatorAuthoring>
     {
@@ -16,8 +18,6 @@ public class SpriteAnimatorAuthoring : MonoBehaviour
             if (authoring.animations == null || authoring.animations.Count == 0) return;
 
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-
-            AddComponentObject(entity, authoring);
 
             AddComponent(entity, new SpriteAnimationState
             {
@@ -41,11 +41,31 @@ public class SpriteAnimatorAuthoring : MonoBehaviour
                 });
 
                 if (clip.frames != null)
+                {
                     foreach (var sprite in clip.frames)
-                        frameBuffer.Add(new SpriteFrameElement { sprite = sprite });
+                    {
+                        var r = sprite.textureRect;
+                        var t = sprite.texture;
+                        frameBuffer.Add(new SpriteFrameElement
+                        {
+                            uv = new float4(r.x / t.width, r.y / t.height,
+                                            r.width / t.width, r.height / t.height)
+                        });
+                    }
+                }
 
                 frameOffset += clip.frames?.Count ?? 0;
             }
+
+            var initClip   = authoring.animations[authoring.initialAnimation];
+            var initSprite = initClip.frames[0];
+            var ir         = initSprite.textureRect;
+            var it         = initSprite.texture;
+            AddComponent(entity, new SpriteUVRect
+            {
+                value = new float4(ir.x / it.width, ir.y / it.height,
+                                   ir.width / it.width, ir.height / it.height)
+            });
         }
     }
 }
@@ -53,9 +73,9 @@ public class SpriteAnimatorAuthoring : MonoBehaviour
 [Serializable]
 public class SpriteAnimationClip
 {
-    public string     name;
+    public string       name;
     public List<Sprite> frames;
-    public float      fps = 8f;
+    public float        fps = 8f;
 }
 
 public struct SpriteAnimationState : IComponentData
@@ -77,5 +97,11 @@ public struct AnimationClipData : IBufferElementData
 [InternalBufferCapacity(16)]
 public struct SpriteFrameElement : IBufferElementData
 {
-    public UnityObjectRef<Sprite> sprite;
+    public float4 uv;
+}
+
+[MaterialProperty("_SpriteUV")]
+public struct SpriteUVRect : IComponentData
+{
+    public float4 value;
 }
