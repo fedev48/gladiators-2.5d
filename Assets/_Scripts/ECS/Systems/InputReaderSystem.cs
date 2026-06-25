@@ -30,7 +30,7 @@ public partial class InputReaderSystem : SystemBase
       
         
 
-        foreach (var moveDirection in SystemAPI.Query<RefRW<CharacterMoveDirection>>())
+        foreach (var moveDirection in SystemAPI.Query<RefRW<MoveDirection>>().WithAll<PlayerTag>())
         {
             moveDirection.ValueRW.value = new float3(cameraFixedDirection.x, 0, cameraFixedDirection.z);
         }

@@ -16,6 +16,12 @@ public class SkeletonAuthoring : MonoBehaviour
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
 
             AddComponent(entity, new SkeletonTag());
+            AddComponent(entity, new UnitTag());
+            AddComponent(entity, new MoveDirection {});
+            AddComponent(entity, new UnitMovementAnimTag());
+            Entity visualEntity = GetEntity(authoring.GetComponentInChildren<SpriteAnimatorAuthoring>(), TransformUsageFlags.Dynamic);
+            AddComponent(entity, new VisualEntity { value = visualEntity });
+            AddComponent(entity, new MoveSpeed     {});
             AddComponent(entity, new ShouldSnapToFloorTag());
             AddComponent(entity, new SkeletonSpawnState());
             AddComponent(entity, new SkeletonFollowState());
@@ -64,5 +70,4 @@ public struct SkeletonSpawnData : IComponentData
     public float  height;
     public float3 surfacePos;
     public float3 followOffset;
-    public float  currentSpeed;
 }

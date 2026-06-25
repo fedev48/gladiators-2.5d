@@ -3,7 +3,6 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 
-[UpdateAfter(typeof(MoveCharacterLocalSystem))]
 public partial struct GroundSnapSystem : ISystem
 {
     private int groundMask;

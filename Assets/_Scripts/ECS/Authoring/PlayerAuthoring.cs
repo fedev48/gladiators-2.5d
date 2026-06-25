@@ -18,8 +18,12 @@ public class PlayerAuthoring : MonoBehaviour
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
 
             AddComponent(entity, new PlayerTag());
-            AddComponent(entity, new CharacterMoveSpeed { value = authoring.playerSpeed });
-            AddComponent(entity, new CharacterMoveDirection {});
+            AddComponent(entity, new UnitTag());
+            AddComponent(entity, new MoveSpeed     { value = authoring.playerSpeed });
+            AddComponent(entity, new MoveDirection {});
+            AddComponent(entity, new UnitMovementAnimTag());
+            Entity visualEntity = GetEntity(authoring.GetComponentInChildren<SpriteAnimatorAuthoring>(), TransformUsageFlags.Dynamic);
+            AddComponent(entity, new VisualEntity { value = visualEntity });
             AddComponent(entity, new ShouldSnapToFloorTag());
             AddComponent(entity, new PhysicsGravityFactor { Value = 0f });
             AddComponent(entity, new SummonSkeletonEvent());
@@ -35,7 +39,6 @@ public class PlayerAuthoring : MonoBehaviour
             });
             AddComponent(entity, new SkeletonSpawnBurst());
             SetComponentEnabled<SkeletonSpawnBurst>(entity, false);
-
             SetComponentEnabled<SummonSkeletonEvent>(entity, false);
         }
     }
@@ -55,23 +58,11 @@ public struct SkeletonSpawnBurst : IComponentData, IEnableableComponent
     public float timer;
 }
 
-public struct PlayerTag : IComponentData {}
-public struct ShouldSnapToFloorTag : IComponentData, IEnableableComponent {}
+public struct PlayerTag           : IComponentData {}
+public struct ShouldSnapToFloorTag: IComponentData, IEnableableComponent {}
 public struct SummonSkeletonEvent : IComponentData, IEnableableComponent {}
-public struct BulletSpellConfig : IComponentData {}
-public struct FireBulletEvent : IComponentData, IEnableableComponent
-{
-    public float3 direction;
-}
-public struct CharacterMoveDirection : IComponentData
-{
-    public float3 value;
-}
-
-public struct CharacterMoveSpeed : IComponentData
-{
-    public float value;
-}
+public struct BulletSpellConfig   : IComponentData {}
+public struct FireBulletEvent     : IComponentData, IEnableableComponent { public float3 direction; }
 
 [WorldSystemFilter(WorldSystemFilterFlags.BakingSystem)]
 public partial struct PlayerFreezeRotationBakingSystem : ISystem
@@ -79,8 +70,6 @@ public partial struct PlayerFreezeRotationBakingSystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         foreach (var mass in SystemAPI.Query<RefRW<PhysicsMass>>().WithAll<PlayerTag>())
-        {
             mass.ValueRW.InverseInertia = float3.zero;
-        }
     }
 }

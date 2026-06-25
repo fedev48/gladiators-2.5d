@@ -10,32 +10,59 @@ public partial struct SpriteAnimationSystem : ISystem
     {
         float deltaTime = SystemAPI.Time.DeltaTime;
 
-        foreach (var (stateRef, clips, frames, uvRef) in
+        foreach (var (stateRef, clips, frames, uvRef, oneShotEnabled) in
             SystemAPI.Query<RefRW<SpriteAnimationState>,
                            DynamicBuffer<AnimationClipData>,
                            DynamicBuffer<SpriteFrameElement>,
-                           RefRW<SpriteUVRect>>())
+                           RefRW<SpriteUVRect>,
+                           EnabledRefRW<OneShotAnimTag>>()
+                .WithPresent<OneShotAnimTag>())
         {
-            ref var entityAnimationState = ref stateRef.ValueRW;
+            ref var s = ref stateRef.ValueRW;
 
-            int anim = math.clamp(entityAnimationState.currentAnimation, 0, clips.Length - 1);
-            if (anim != entityAnimationState.prevAnimation)
+            int anim = s.currentAnimation;
+            for (int guard = 0; guard < clips.Length; guard++)
             {
-                entityAnimationState.currentAnimation = anim;
-                entityAnimationState.currentFrame     = 0;
-                entityAnimationState.elapsed          = 0f;
-                entityAnimationState.prevAnimation    = anim;
+                if (anim < 0 || anim >= clips.Length || clips[anim].overrideTo < 0) break;
+                anim = clips[anim].overrideTo;
+            }
+            anim = math.clamp(anim, 0, clips.Length - 1);
+
+            s.currentAnimation = anim;
+            if (anim != s.prevAnimation)
+            {
+                s.currentFrame  = 0;
+                s.elapsed       = 0f;
+                s.prevAnimation = anim;
             }
 
-            var clip = clips[entityAnimationState.currentAnimation];
+            var clip = clips[s.currentAnimation];
             if (clip.frameCount == 0) continue;
 
-            entityAnimationState.elapsed += deltaTime;
-            if (entityAnimationState.elapsed < 1f / clip.fps) continue;
+            s.elapsed += deltaTime;
+            if (s.elapsed < 1f / clip.fps) continue;
 
-            entityAnimationState.elapsed      -= 1f / clip.fps;
-            entityAnimationState.currentFrame  = (entityAnimationState.currentFrame + 1) % clip.frameCount;
-            uvRef.ValueRW.value = frames[clip.startIndex + entityAnimationState.currentFrame].uv;
+            s.elapsed -= 1f / clip.fps;
+
+            int nextFrame = s.currentFrame + 1;
+            if (nextFrame >= clip.frameCount)
+            {
+                if (oneShotEnabled.ValueRO)
+                {
+                    oneShotEnabled.ValueRW = false; 
+                    s.currentFrame = 0;
+                }
+                else
+                {
+                    s.currentFrame = 0; 
+                }
+            }
+            else
+            {
+                s.currentFrame = nextFrame;
+            }
+
+            uvRef.ValueRW.value = frames[clip.startIndex + s.currentFrame].uv;
         }
     }
 }

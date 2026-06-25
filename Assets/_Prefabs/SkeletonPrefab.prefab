@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 4525370748367557537}
+  - {fileID: 5666634126666601385}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3397887327777097049
@@ -109,7 +109,7 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!1 &4911449256077353681
+--- !u!1 &7752503389730692594
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,46 +117,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4525370748367557537}
-  - component: {fileID: 2163928492748465668}
-  - component: {fileID: 2144539257363258965}
-  m_Layer: 8
-  m_Name: Visual
+  - component: {fileID: 5666634126666601385}
+  - component: {fileID: 5240251618104991421}
+  - component: {fileID: 8633331789477152782}
+  - component: {fileID: 7714210780522999743}
+  m_Layer: 10
+  m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4525370748367557537
+--- !u!4 &5666634126666601385
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911449256077353681}
+  m_GameObject: {fileID: 7752503389730692594}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0, y: -0.92387956, z: -0, w: 0.38268343}
+  m_LocalPosition: {x: 0, y: 1.55, z: 0}
+  m_LocalScale: {x: 4, y: 2.4, z: 4.8}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4541676833675082335}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2163928492748465668
+  m_LocalEulerAnglesHint: {x: 0, y: -135, z: 0}
+--- !u!33 &5240251618104991421
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911449256077353681}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &2144539257363258965
+  m_GameObject: {fileID: 7752503389730692594}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8633331789477152782
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4911449256077353681}
+  m_GameObject: {fileID: 7752503389730692594}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -175,7 +176,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ac2129b16ff79424d9800e3391db40ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -199,3 +200,123 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7714210780522999743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752503389730692594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca72a86f7e7f541199ddb985368a43bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteAnimatorAuthoring
+  animations:
+  - name: IdleSouth
+    frames:
+    - {fileID: -314932916, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 58762974, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -5159925, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -416432924, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -638569516, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 509419178, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -1805744157, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -1748795701, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -117395952, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -1130964455, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -1613224678, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    fps: 12
+    isOverride: 0
+    overrideTo: 0
+    flip: 0
+  - name: IdleNorth
+    frames:
+    - {fileID: -1435907686, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -18496469, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 858833557, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 800375094, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1826086585, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -956935381, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 501726620, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -843669542, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1218605423, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 730115607, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -1749038430, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -32828992, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    fps: 12
+    isOverride: 1
+    overrideTo: 0
+    flip: 0
+  - name: IdleEast
+    frames:
+    - {fileID: -1435907686, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -18496469, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 858833557, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 800375094, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1826086585, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -956935381, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 501726620, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -843669542, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1218605423, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 730115607, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -1749038430, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -32828992, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    fps: 12
+    isOverride: 1
+    overrideTo: 0
+    flip: 0
+  - name: IdleWest
+    frames:
+    - {fileID: -1435907686, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -18496469, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 858833557, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 800375094, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1826086585, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -956935381, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 501726620, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -843669542, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 1218605423, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: 730115607, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -1749038430, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    - {fileID: -32828992, guid: 82ef41c48d36548508aee9177984ca4a, type: 3}
+    fps: 12
+    isOverride: 1
+    overrideTo: 0
+    flip: 1
+  - name: WalkSouth
+    frames:
+    - {fileID: -420977694, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 834055117, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: -2112382639, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 459984035, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 1244400831, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 1474694676, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 29509688, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    - {fileID: 352475607, guid: f5b7ff4fc338a4ff88d0148731e907c4, type: 3}
+    fps: 12
+    isOverride: 0
+    overrideTo: 0
+    flip: 0
+  - name: WalkNorth
+    frames: []
+    fps: 12
+    isOverride: 1
+    overrideTo: 4
+    flip: 0
+  - name: WalkEast
+    frames: []
+    fps: 12
+    isOverride: 1
+    overrideTo: 4
+    flip: 0
+  - name: WalkWest
+    frames: []
+    fps: 12
+    isOverride: 1
+    overrideTo: 4
+    flip: 1
+  initialAnimation: 0
+  currentAnimation: 0
+  flipPivotOffset: {x: -0.004, y: 0}
+  cameraYAngle: -135

@@ -8,8 +8,10 @@ using UnityEngine;
 public class SpriteAnimatorAuthoring : MonoBehaviour
 {
     public List<SpriteAnimationClip> animations;
-    public int initialAnimation = 0;
-    public int currentAnimation = 0;
+    public int     initialAnimation = 0;
+    public int     currentAnimation = 0;
+    public Vector2 flipPivotOffset  = Vector2.zero;
+    public float   cameraYAngle     = 0f;
 
     public class Baker : Baker<SpriteAnimatorAuthoring>
     {
@@ -33,39 +35,59 @@ public class SpriteAnimatorAuthoring : MonoBehaviour
             int frameOffset = 0;
             foreach (var clip in authoring.animations)
             {
-                clipBuffer.Add(new AnimationClipData
+                if (clip.isOverride && clip.flip)
                 {
-                    startIndex = frameOffset,
-                    frameCount = clip.frames?.Count ?? 0,
-                    fps        = Mathf.Max(clip.fps, 0.01f)
-                });
-
-                if (clip.frames != null)
-                {
-                    foreach (var sprite in clip.frames)
+                    
+                    var target     = authoring.animations[clip.overrideTo];
+                    int frameCount = target.frames?.Count ?? 0;
+                    clipBuffer.Add(new AnimationClipData
                     {
-                        var r = sprite.textureRect;
-                        var t = sprite.texture;
-                        frameBuffer.Add(new SpriteFrameElement
+                        startIndex = frameOffset,
+                        frameCount = frameCount,
+                        fps        = Mathf.Max(target.fps, 0.01f),
+                        overrideTo = -1
+                    });
+                    if (target.frames != null)
+                    {
+                        float2 po = (float2)authoring.flipPivotOffset;
+                        foreach (var sprite in target.frames)
                         {
-                            uv = new float4(r.x / t.width, r.y / t.height,
-                                            r.width / t.width, r.height / t.height)
-                        });
+                            float4 uv = SpriteToUV(sprite);
+                            frameBuffer.Add(new SpriteFrameElement { uv = new float4(uv.x + uv.z + po.x, uv.y + po.y, -uv.z, uv.w) });
+                        }
                     }
+                    frameOffset += frameCount;
                 }
-
-                frameOffset += clip.frames?.Count ?? 0;
+                else
+                {
+                    clipBuffer.Add(new AnimationClipData
+                    {
+                        startIndex = frameOffset,
+                        frameCount = clip.isOverride ? 0 : (clip.frames?.Count ?? 0),
+                        fps        = Mathf.Max(clip.fps, 0.01f),
+                        overrideTo = clip.isOverride ? clip.overrideTo : -1
+                    });
+                    if (!clip.isOverride && clip.frames != null)
+                    {
+                        foreach (var sprite in clip.frames)
+                            frameBuffer.Add(new SpriteFrameElement { uv = SpriteToUV(sprite) });
+                    }
+                    frameOffset += clip.isOverride ? 0 : (clip.frames?.Count ?? 0);
+                }
             }
 
-            var initClip   = authoring.animations[authoring.initialAnimation];
-            var initSprite = initClip.frames[0];
-            var ir         = initSprite.textureRect;
-            var it         = initSprite.texture;
-            AddComponent(entity, new SpriteUVRect
-            {
-                value = new float4(ir.x / it.width, ir.y / it.height,
-                                   ir.width / it.width, ir.height / it.height)
-            });
+            var initSprite = authoring.animations[authoring.initialAnimation].frames[0];
+            AddComponent(entity, new SpriteUVRect { value = SpriteToUV(initSprite) });
+            AddComponent(entity, new OneShotAnimTag());
+            SetComponentEnabled<OneShotAnimTag>(entity, false);
+            AddComponent(entity, new CameraFacingData { invRotation = math.inverse(quaternion.RotateY(math.radians(authoring.cameraYAngle))) });
+        }
+
+        static float4 SpriteToUV(Sprite sprite)
+        {
+            Rect    r  = sprite.rect;
+            Vector2 ts = sprite.texture.texelSize;
+            return new float4(r.xMin * ts.x, r.yMin * ts.y, r.width * ts.x, r.height * ts.y);
         }
     }
 }
@@ -75,7 +97,10 @@ public class SpriteAnimationClip
 {
     public string       name;
     public List<Sprite> frames;
-    public float        fps = 8f;
+    public float        fps        = 8f;
+    public bool         isOverride = false;
+    public int          overrideTo = 0;
+    public bool         flip       = false;
 }
 
 public struct SpriteAnimationState : IComponentData
@@ -92,6 +117,7 @@ public struct AnimationClipData : IBufferElementData
     public int   startIndex;
     public int   frameCount;
     public float fps;
+    public int   overrideTo;
 }
 
 [InternalBufferCapacity(16)]
@@ -104,4 +130,9 @@ public struct SpriteFrameElement : IBufferElementData
 public struct SpriteUVRect : IComponentData
 {
     public float4 value;
+}
+
+public struct CameraFacingData : IComponentData
+{
+    public quaternion invRotation;
 }
