@@ -8,6 +8,11 @@ using Unity.Transforms;
 public partial struct FireBulletSystem : ISystem
 {
     [BurstCompile]
+    public void OnCreate(ref SystemState state)
+    {
+        state.RequireForUpdate<EntitiesReferences>();
+    }
+    [BurstCompile]
     public void OnUpdate(ref SystemState state)
     {
         EntitiesReferences refs = SystemAPI.GetSingleton<EntitiesReferences>();

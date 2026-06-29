@@ -13,6 +13,7 @@ public partial struct SkeletonSpawnSystem : ISystem
 
     public void OnCreate(ref SystemState state)
     {
+        state.RequireForUpdate<EntitiesReferences>();
         random = Unity.Mathematics.Random.CreateFromIndex((uint)System.DateTime.Now.Ticks);
         groundMask = LayerMask.GetMask("Ground");
     }
